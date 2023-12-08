@@ -152,7 +152,7 @@ def lidar_callback(point_cloud, point_list):
     point_list.points = o3d.utility.Vector3dVector(points)
     point_list.colors = o3d.utility.Vector3dVector(int_color)
 
-    # store point cloud into .off file
+    # store point cloud into .ply file
     o3d.io.write_point_cloud("point_cloud_{}.ply".format(point_cloud.frame), point_list)
 
 
